@@ -19,16 +19,12 @@ app.use(cors({
 
 
 app.use(express.json());
-// app.use('/static', express.static(path.join(__dirname, 'static')));
+app.use('/static', express.static(path.join(__dirname, 'static')));
 // app.use(express.static('public', { type: 'application/javascript' }));
 
-app.use('/static', express.static(path.join(__dirname, 'static'), {
-    setHeaders: (res, path) => {
-        if (path.endsWith('.js')) {
-            res.set('Content-Type', 'application/javascript');
-        }
-    }
-}));
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'static', 'index.html'));
+});
 
 app.use(express.urlencoded({ extended: false }));
 app.use(fileUpload({}));
