@@ -1,0 +1,191 @@
+.siteWrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.siteContent {
+    flex: 1;
+}
+.container {
+    width: 100%;
+    max-width: 1296px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.addProductJerks{
+  display: flex;
+  align-items: flex-start;
+
+}
+
+
+.inputWrapperJerks{
+  display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+}
+
+
+.inputWrapperJerks input,
+.inputWrapperJerks textarea {
+    width: 270px;
+    padding: 15px;
+    border: 1px solid #00f1b5;
+    background-color: transparent;
+    border-radius: 8px;
+    margin-top: 16px;
+    color: #F6FAF9;
+}
+
+.inputWrapperJerks input::placeholder,
+.inputWrapperJerks textarea::placeholder {
+    font-size: 16px;
+}
+
+.inputWrapperJerks textarea {
+    min-height: 180px;
+    line-height: 1.5;
+}
+
+.addProduct__rightContentJerks{
+  display: flex;
+    flex-direction: column;
+}
+
+.containerJerks{
+  display: flex;
+  
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 20px;
+    box-sizing: border-box;  /* Убедитесь, что padding и border не добавляют дополнительную ширину */
+}
+
+.uploadBoxJerks{
+  border: 2px dotted #ccc;
+  
+  cursor: pointer;
+  width: 300px;
+  height: 188px;
+  font-size: 17px;
+  text-align: center;
+}
+
+.uploadedImageJerks{
+  width: 100%;  /* Устанавливаем ширину изображения относительно контейнера */
+  height: 100%;  /* Устанавливаем высоту изображения относительно контейнера */
+  object-fit: cover;  /* Чтобы изображение масштабировалось и не искажалось */
+}
+
+.imageContainerJerks{
+  position: relative;  /* Делаем контейнер позиционированным, чтобы кнопка могла располагаться поверх */
+  max-width: 300px;  /* Ограничиваем максимальную ширину контейнера */
+  max-height: 188px;  /* Ограничиваем максимальную высоту контейнера */
+  overflow: hidden;  /* Если изображение слишком большое, оно обрежется */
+  
+}
+
+.removeButtonJerks{
+  position: absolute;  /* Размещаем кнопку поверх изображения */
+  top: 10px;  /* Располагаем кнопку в верхнем левом углу контейнера */
+  right: 10px;  /* Располагаем кнопку в верхнем правом углу контейнера */
+  background-color: #ff0000; /* Красный фон для кнопки */
+  color: white; /* Белый текст */
+  padding: 10px 20px; /* Отступы */
+  border: none; /* Убираем границу */
+  border-radius: 5px; /* Скругляем углы */
+  cursor: pointer; /* Курсор в виде указателя */
+  z-index: 10; /* Обеспечиваем, чтобы кнопка была поверх изображения */
+}
+
+
+
+
+h1, .h1 {
+    font-size: 55px;
+    font-weight: 500;
+}
+
+@media (max-width: 500px) {
+    h1, .h1 {
+        font-size: 32px;
+    }
+}
+
+h2, .h2 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.btn {
+    display: inline-flex;
+    background-color: #A1978B;
+    padding: 22px 50px;
+    color: #000000;
+    border: 1px solid #000000;
+    text-decoration: none;
+    background-image: linear-gradient(to top, #4CAF50, #4CAF50);
+    background-size: 100% 0;
+    font-size: 20px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    transition: background-size 0.2s ease;
+}
+
+.btn:hover {
+    background-size: 100% 100%;
+}
+
+@media (max-width: 1024px) {
+    .btn {
+        background-image: none;
+    }
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+/*
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+*/

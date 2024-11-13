@@ -1,0 +1,167 @@
+.placingOrder {
+    padding: 50 0;
+}
+
+.pageNavigation {
+    display: flex;
+    align-items: center;
+    margin: 25px 0 40px 0;
+}
+
+.minus {
+    font-size: 17px;
+    font-weight: normal;
+    margin: 0 13px;
+}
+
+.page {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    transition: color .3s;
+}
+
+.page:hover {
+    color: orange;
+}
+
+.placingForm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.placingForm__title {
+    margin-bottom: 15px;
+}
+
+.placingForm__items {
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 215px / 2);
+    margin-bottom: 80px;
+}
+
+.placingForm__items h2 {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.placingForm__items input {
+    font-size: 17px;
+    padding-bottom: 16px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #000000;
+    background-color: transparent;
+    max-width: 350px;
+    margin-top: 35px;
+}
+
+.placingForm__items input:focus {
+    border-bottom: 2px solid gray;
+}
+
+.placingForm__items input::placeholder {
+    color: #000000;
+}
+
+.receipt {
+    max-width: 318px;
+    margin-top: 45px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.item,
+.price {
+    font-size: 20px;
+}
+
+.paymentMethod input {
+    margin-top: 0;
+}
+
+.paymentMethod__item {
+    display: flex;
+    align-items: center;
+    margin-top: 45px;
+}
+
+.paymentMethod__item label {
+    margin-left: 15px;
+    font-size: 17px;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.5);
+}
+
+.btn {
+    margin-top: 47px;
+    margin-right: auto;
+}
+
+@media (max-width: 1200px) {
+    .placingOrder {
+        padding: 200px 32px 100px 32px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .placingForm__items {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .placingOrder {
+        padding: 130px 32px 100px 32px;
+    }
+
+    .pageNavigation {
+        display: flex;
+        align-items: center;
+        margin: 25px 0 100px 0;
+    }
+}
+
+@media (max-width: 1000px) {
+    .page:hover {
+        color: #000000D9;
+    }
+}
+
+@media (max-width: 768px) {
+    .receipt {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .placingOrder {
+        padding: 32px 20px 32px 20px;
+    }
+
+    .pageNavigation {
+        display: flex;
+        align-items: center;
+        margin: 25px 0 100px 0;
+    }
+
+    .page {
+        font-size: 14px;
+    }
+
+    .paymentMethod__item label {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+}

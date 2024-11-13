@@ -1,0 +1,71 @@
+.burgerMenuContainer {
+    display: none;
+}
+
+.burgerIcon {
+    cursor: pointer;
+    font-size: 50px;
+    margin-right: 50px;
+}
+
+.menu {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    background-color: #A1978B;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 245px;
+    padding-bottom: 30px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+}
+
+/* Додаємо хрестик всередині меню */
+.closeMenu {
+    font-size: 35px;
+    cursor: pointer;
+    align-self: flex-start;
+    margin-left: 10px;
+}
+
+.menuItem {
+    font-size: 16px;
+    background: none;
+    border: none;
+    padding: 10px;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.menuItem:hover {
+    background-color: #f0f0f0;
+}
+
+.menuItem + .menuItem {
+    margin-top: 5px;
+}
+
+@media (max-width: 1300px) {
+    .burgerMenuContainer {
+        position: relative;
+        display: inline-block;
+    }
+}
+
+@media (max-width: 600px) {
+    .burgerIcon {
+        font-size: 35px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 425px) {
+    .burgerIcon {
+        font-size: 25px;
+        margin-right: 10px;
+    }
+}

@@ -1,0 +1,361 @@
+
+.cart {
+    padding: 50px 0;
+}
+
+.pageNavigation {
+    display: flex;
+    align-items: center;
+    margin: 25px 0 40px 0;
+}
+
+.minus {
+    font-size: 17px;
+    font-weight: normal;
+    margin: 0 13px;
+}
+
+.page {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    transition: color .3s;
+}
+
+.page:hover {
+    color: orange;
+}
+
+.productInCart {
+    display: flex;
+    align-items: center;
+    padding: 30px 0;
+    font-size: 20px;
+}
+
+.adaptiveWrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.topContent {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #CCCCCC;
+    padding-bottom: 25px;
+}
+
+.item {
+    font-size: 20px;
+}
+
+.item:first-child {
+    margin-right: auto;
+}
+
+.item:nth-child(3) {
+    margin-left: 145px;
+    margin-right: 200px;
+}
+
+.dagger {
+    position: relative;
+    width: 21px;
+    height: 21px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transform: rotate(-45deg);
+    margin-right: 45px;
+}
+
+.dagger::before,
+.dagger::after {
+    content: '';
+    position: absolute;
+    background-color: black;
+}
+
+.dagger::before {
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-25%);
+}
+
+.dagger::after {
+    width: 100%;
+    height: 1px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-25%);
+}
+
+.productName {
+    margin-left: 24px;
+}
+
+.productName .item {
+    display: none;
+}
+
+.productName span {
+    font-weight: bold;
+}
+
+.price,
+.summaryPrice {
+    font-weight: bold;
+    margin-left: auto;
+}
+
+.quantity {
+    padding: 10px 20px;
+    border: 1px solid #000000;
+    margin-left: 147px;
+    margin-right: 240px;
+}
+
+.summaryPrice {
+    margin-left: 0;
+}
+
+.coupon {
+    display: flex;
+    margin-bottom: 88px;
+}
+
+.coupon .btn {
+    background-color: transparent;
+}
+
+.coupon .btn span {
+    margin-left: 5px;
+}
+
+.couponInput {
+    display: block;
+    background-color: transparent;
+    margin-right: 16px;
+    border: none;
+    color: black;
+    font-size: 17px;
+    border-bottom: 1px solid #000000;
+}
+
+.couponInput::placeholder {
+    color: black;
+}
+
+.couponInput:focus {
+    outline: none;
+}
+
+.btn:last-child {
+    margin-left: auto;
+}
+
+.summary {
+    margin-left: auto;
+    width: max-content;
+}
+
+.priceSum {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+.priceSum span {
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.sum {
+    border: 1px solid #000000;
+    padding: 16px 32px;
+    background-color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    margin-right: 15px;
+}
+
+.sum span {
+    font-weight: bold;
+    margin-left: 55px;
+}
+
+.summary .btn {
+    font-size: 17px;
+}
+
+.summary .btn span {
+    margin-left: 5px;
+}
+
+.adaptiveWrapper .item {
+    display: none;
+}
+
+/*media*/
+
+@media (max-width: 1400px) {
+    .cart {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .page:hover {
+        color: inherit !important;
+    }
+
+    .summaryPrice,
+    .item:last-child {
+        display: none;
+    }
+
+    .price {
+        margin-left: auto;
+    }
+
+    .item:nth-child(3) {
+        margin-left: 92px;
+        margin-right: 0;
+    }
+
+    .quantity {
+        margin-left: 120px;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 630px) {
+    .productInCart {
+        align-items: flex-start;
+        font-size: 14px;
+    }
+
+    .dagger {
+        display: none;
+    }
+
+    .topContent {
+        display: none;
+    }
+
+    .adaptiveWrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .productName .item {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    .item {
+        font-size: 14px;
+    }
+
+    .quantity,
+    .productName,
+    .price,
+    .item:nth-child(3),
+    .item {
+        margin-left: 0;
+    }
+
+    .productPhoto {
+        margin-right: 21px;
+    }
+
+    .price {
+        display: flex;
+        align-items: center;
+        margin: 24px 0;
+    }
+
+    .price .item {
+        display: block;
+        font-weight: normal;
+        margin-right: 16px;
+    }
+
+    .item:nth-child(3) {
+        margin-left: 0;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .pageNavigation {
+        margin: 25px 0 24px 0;
+        border-bottom: 1px solid #CCCCCC;
+        padding-bottom: 24px;
+    }
+
+    .coupon {
+        font-size: 14px;
+    }
+
+    .coupon .btn {
+        font-size: 14px;
+    }
+
+    .summary {
+        margin-left: 0;
+    }
+
+    .coupon .btn:last-child {
+        display: none;
+    }
+
+    .priceSum,
+    .summary .btn span {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .page {
+        font-size: 14px;
+    }
+
+    .couponInput {
+        font-size: 14px;
+        max-width: 158px;
+    }
+
+    .coupon .btn {
+        padding: 12px 20px;
+    }
+
+    .sum {
+        padding: 12px 8px;
+        font-size: 16px;
+    }
+
+    .summary .btn {
+        padding: 12px 30px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 375px) {
+    .productInCart {
+        align-items: flex-start;
+        font-size: 12px;
+    }
+
+    .couponInput {
+        font-size: 14px;
+        max-width: 100px;
+    }
+
+    .sum span {
+        margin-left: 17px;
+    }
+}

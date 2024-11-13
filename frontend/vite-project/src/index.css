@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: "Radio Canada Big", sans-serif;
+  background-color: #EBE4D0;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+code {
+  font-family: "Radio Canada Big", sans-serif;
+}
+
+.addProductJerks{
+  display: flex;
+  align-items: flex-start;
+
+}
+
+
+.inputWrapperJerks{
+  display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+}
+
+
+.inputWrapperJerks input,
+.inputWrapperJerks textarea {
+    width: 270px;
+    padding: 15px;
+    border: 1px solid #00f1b5;
+    background-color: transparent;
+    border-radius: 8px;
+    margin-top: 16px;
+    color: #F6FAF9;
+}
+
+.inputWrapperJerks input::placeholder,
+.inputWrapperJerks textarea::placeholder {
+    font-size: 16px;
+}
+
+.inputWrapperJerks textarea {
+    min-height: 180px;
+    line-height: 1.5;
+}
+
+.addProduct__rightContentJerks{
+  display: flex;
+    flex-direction: column;
+}
+
+.containerJerks{
+  display: flex;
+  
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 20px;
+    box-sizing: border-box;  /* Убедитесь, что padding и border не добавляют дополнительную ширину */
+}
+
+.uploadBoxJerks{
+  border: 2px dotted #ccc;
+  
+  cursor: pointer;
+  width: 300px;
+  height: 188px;
+  font-size: 17px;
+  text-align: center;
+}
+
+.uploadedImageJerks{
+  width: 100%;  /* Устанавливаем ширину изображения относительно контейнера */
+  height: 100%;  /* Устанавливаем высоту изображения относительно контейнера */
+  object-fit: cover;  /* Чтобы изображение масштабировалось и не искажалось */
+}
+
+.imageContainerJerks{
+  position: relative;  /* Делаем контейнер позиционированным, чтобы кнопка могла располагаться поверх */
+  max-width: 300px;  /* Ограничиваем максимальную ширину контейнера */
+  max-height: 188px;  /* Ограничиваем максимальную высоту контейнера */
+  overflow: hidden;  /* Если изображение слишком большое, оно обрежется */
+  
+}
+
+.removeButtonJerks{
+  position: absolute;  /* Размещаем кнопку поверх изображения */
+  top: 10px;  /* Располагаем кнопку в верхнем левом углу контейнера */
+  right: 10px;  /* Располагаем кнопку в верхнем правом углу контейнера */
+  background-color: #ff0000; /* Красный фон для кнопки */
+  color: white; /* Белый текст */
+  padding: 10px 20px; /* Отступы */
+  border: none; /* Убираем границу */
+  border-radius: 5px; /* Скругляем углы */
+  cursor: pointer; /* Курсор в виде указателя */
+  z-index: 10; /* Обеспечиваем, чтобы кнопка была поверх изображения */
+}
+
+

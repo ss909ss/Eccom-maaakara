@@ -1,0 +1,239 @@
+.footer {
+    background-color: #70625B;
+    padding: 100px 0 60px 0;
+}
+
+.pageNavs,
+.foodNavs {
+    display: flex;
+    align-items: center;
+}
+
+.pageNavs {
+    margin-left: 40px;
+}
+
+.foodNavs {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 30px;
+    margin-bottom: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+.nav {
+    display: flex;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: normal;
+    color: white;
+    transition: all .5s;
+    margin-left: 45px;
+}
+
+.nav:hover {
+    color: orange;
+}
+
+.protected {
+    font-size: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 120px;
+    transition: all .3s;
+}
+
+.protected:hover {
+    color: orange;
+}
+
+.contactWithUs {
+    margin-left: auto;
+}
+
+.leftContent {
+    width: 100%;
+}
+
+.number,
+.gmail {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: color .3s;
+}
+
+.number:hover,
+.gmail:hover {
+    color: orange;
+}
+
+.gmail {
+    margin: 10px 0;
+}
+
+.ourSocials {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.ourSocial ~ .ourSocial {
+    margin-left: 12px;
+}
+
+.ourSocial img {
+    height: 21px;
+    width: 21px;
+    transition: height 0.3s ease-out, width 0.3s ease-out; /* плавное возвращение при снятии курсора */
+}
+
+.ourSocial img:hover {
+    animation: socialHover 0.3s ease-in forwards; /* анимация только на увеличение */
+}
+
+@keyframes socialHover {
+    from {
+        height: 21px;
+        width: 21px;
+    }
+
+    to {
+        height: 25px;
+        width: 25px;
+    }
+}
+
+.topSocials {
+    display: none;
+}
+
+/*media*/
+
+@media (max-width: 1300px) {
+    .footer {
+        width: 100%;
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .nav:hover,
+    .number:hover,
+    .gmail:hover,
+    .protected:hover {
+        color: white;
+    }
+
+    .ourSocial img:hover {
+        animation: none;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .leftContent {
+        width: auto;
+        margin: 0 auto;
+    }
+
+    .protectedWrapper {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    .protected {
+        margin-right: 0;
+    }
+
+    .foodNav {
+        margin-left: 0;
+    }
+
+    ul {
+        padding-inline-start: 0;
+    }
+
+    .number,
+    .gmail {
+        text-align: left;
+    }
+
+    .ourSocials {
+        margin-top: 45px;
+    }
+
+    .protected {
+        margin-top: 90px;
+    }
+
+
+}
+
+@media (max-width: 700px) {
+    .pageNavs {
+        display: none;
+    }
+
+    .topSocials {
+        display: block;
+        margin-left: auto;
+    }
+
+    .ourSocials {
+        margin-top: 0;
+    }
+
+    .contactWithUs .ourSocials {
+        display: none;
+    }
+
+    .contactWithUs {
+        margin-top: 30px;
+    }
+
+    .footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .leftContent {
+        margin: 0;
+        width: 100%;
+    }
+
+    .adaptiveFlex {
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .number,
+    .gmail,
+    .protected,
+    .nav {
+        font-size: 16px;
+    }
+
+    .number,
+    .gmail {
+        text-align: right;
+    }
+
+    .ourSocial img {
+        max-width: 15px;
+        max-height: 15px;
+    }
+}
+
+@media (max-width: 375px) {
+    .ourSocial {
+        width: 17px;
+        height: 17px;
+    }
+}

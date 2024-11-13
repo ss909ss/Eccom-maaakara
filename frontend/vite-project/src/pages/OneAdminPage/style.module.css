@@ -1,0 +1,13 @@
+.bannerImage{
+    width: 600px;
+    height: 300px;
+}
+
+.oneItemSection{
+    width: auto;
+    height: 100%;
+    display: flex;
+    margin:  100px 400px;
+    justify-content: space-between;
+    flex-direction: column;
+}
