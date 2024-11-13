@@ -12,9 +12,11 @@ require('dotenv').config();
 
 const app = express();
 app.use(logger('dev'));
-app.use(cors({ origin: 'https://eccom-maaakara-1.onrender.com/' },
-    {methods: ['GET', 'POST', 'PUT', 'DELETE']},
-));
+app.use('*', cors({
+    origin: 'https://eccom-maaakara-1.onrender.com',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true 
+}));
 
 app.use(express.json());
 app.use('/static', express.static(path.join(__dirname, 'static')));
