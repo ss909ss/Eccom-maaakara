@@ -12,19 +12,12 @@ require('dotenv').config();
 
 const app = express();
 app.use(logger('dev'));
-app.use(cors({
-    origin: 'https://eccom-maaakara-1.onrender.com',
-    methods: ['GET', 'POST', 'PUT', 'DELETE']
-}));
-
+app.use(cors({ origin: 'https://eccom-maaakara-1.onrender.com/' },
+    {methods: ['GET', 'POST', 'PUT', 'DELETE']},
+));
 
 app.use(express.json());
 app.use('/static', express.static(path.join(__dirname, 'static')));
-// app.use(express.static('public', { type: 'application/javascript' }));
-
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'static', 'index.html'));
-});
 
 app.use(express.urlencoded({ extended: false }));
 app.use(fileUpload({}));
