@@ -32,7 +32,7 @@ const OneAdminPagePigJerks:FC = () => {
             ) : Pigjerks ? (
                 <>
                     <img 
-                        src={`http://localhost:5001${Pigjerks.image}`}
+                        src={`https://eccom-maaakara-1.onrender.com/${Pigjerks.image}`}
                         alt={Pigjerks.title} 
                         className={styles.productImage} 
                     />

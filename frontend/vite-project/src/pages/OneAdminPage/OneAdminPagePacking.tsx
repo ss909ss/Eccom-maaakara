@@ -32,7 +32,7 @@ const OneAdminPackage: FC = () => {
             ) : Packing ? (
                 <>
                     <img 
-                        src={`http://localhost:5001${Packing.image}`}
+                        src={`https://eccom-maaakara-1.onrender.com${Packing.image}`}
                         alt={Packing.title} 
                         className={styles.productImage} 
                     />
