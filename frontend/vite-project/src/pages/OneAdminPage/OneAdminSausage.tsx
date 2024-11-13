@@ -30,7 +30,7 @@ const OneAdminSausage: FC = () => {
             ) : sausage ? (
                 <>
                     <img 
-                        src={`https://eccom-maaakara-1.onrender.com/${sausage.image}`}
+                        src={`https://eccom-maaakara.onrender.com${sausage.image}`}
                         alt={sausage.title} 
                         className={styles.productImage} 
                     />

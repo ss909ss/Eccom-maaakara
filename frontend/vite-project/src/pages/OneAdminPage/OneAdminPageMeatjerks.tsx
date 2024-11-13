@@ -31,7 +31,7 @@ const OneAdminPageMeatjerks: FC = () => {
             ) : meatJerk ? (
                 <>
                     <img 
-                        src={`https://eccom-maaakara-1.onrender.com${meatJerk.image}`}
+                        src={`https://eccom-maaakara.onrender.com${meatJerk.image}`}
                         alt={meatJerk.title} 
                         className={styles.productImage} 
                     />
