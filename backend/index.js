@@ -37,14 +37,5 @@ app.get('/', (req, res) => {
     res.send("Welcome to the API!");
 });
 
-const start = async () => {
-    try {
-        app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
-    } catch (e) {
-        console.log(e);
-    }
-};
-
-start();
 
 module.exports = app;
