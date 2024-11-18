@@ -62,7 +62,7 @@ const allBanners = async (req, res) => {
     // If needed, add the full URL to the image path
     const bannersWithFullUrls = banners.map(banner => ({
       ...banner,
-      imageUrl: `https://makajerky-test.onrender.com${banner.imageUrl}`  
+      imageUrl: `https://makajerky-test.onrender.com/static/${banner.imageUrl}`  
     }));
 
     res.status(200).json(bannersWithFullUrls);
