@@ -4,7 +4,7 @@ import styles from './style.module.css';
 import { useGetAllPackingQuery } from '../../../services/products';
 import { Link } from 'react-router-dom';
 import { Path } from '../../../Path';
-
+import  backendUrl from '../../../config';
 
 const Sets: React.FC = () => {
     const { data: Packing, error, isLoading } = useGetAllPackingQuery();
@@ -25,7 +25,7 @@ const Sets: React.FC = () => {
                         className={styles.productList__card}
                     >
                         <img
-                            src={`http://localhost:5001${box.image}`}
+                            src={`${backendUrl}${box.image}`}
                             alt={box.title}
                             className={styles.productImage}
                         />

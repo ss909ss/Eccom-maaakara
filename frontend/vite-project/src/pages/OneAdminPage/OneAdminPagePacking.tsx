@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useGetOnePackQuery, useRemovePackingMutation } from "../../services/products";
 import { Path } from "../../Path";
 import styles from './style.module.css';
-
+import  backendUrl from '../../config';
 
 const OneAdminPackage: FC = () => {
     const navigate = useNavigate();
@@ -31,7 +31,7 @@ const OneAdminPackage: FC = () => {
             ) : Packing ? (
                 <>
                     <img 
-                        src={`http://localhost:5001${Packing.image}`}
+                        src={`${backendUrl}${Packing.image}`}
                         alt={Packing.title} 
                         className={styles.productImage} 
                     />

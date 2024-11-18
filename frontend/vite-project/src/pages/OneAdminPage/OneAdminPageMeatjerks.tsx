@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import {  useGetOneMeatJerkQuery, useRemoveMeatJerkMutation } from "../../services/products";
 import { Path } from "../../Path";
 import styles from './style.module.css';
-
+import  backendUrl from '../../config';
 
 const OneAdminPageMeatjerks: FC = () => {
     const navigate = useNavigate();
@@ -31,7 +31,7 @@ const OneAdminPageMeatjerks: FC = () => {
             ) : meatJerk ? (
                 <>
                     <img 
-                        src={`http://localhost:5001${meatJerk.image}`}
+                        src={`${backendUrl}${meatJerk.image}`}
                         alt={meatJerk.title} 
                         className={styles.productImage} 
                     />

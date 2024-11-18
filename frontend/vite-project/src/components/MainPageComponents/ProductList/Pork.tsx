@@ -3,7 +3,7 @@ import styles from './style.module.css';
 import { useGetAllPigJerksQuery } from '../../../services/products';
 import { Link } from 'react-router-dom';
 import { Path } from '../../../Path';
-
+import  backendUrl from '../../../config';
 
 const Pork: React.FC = () => {
 
@@ -28,7 +28,7 @@ const Pork: React.FC = () => {
                     className={styles.productList__card}
                 >
                     <img
-                        src={`http://localhost:5001${pigjerk.image}`}
+                        src={`${backendUrl}${pigjerk.image}`}
                         alt={pigjerk.title}
                         className={styles.productImage}
                     />

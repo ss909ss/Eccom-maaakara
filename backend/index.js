@@ -6,6 +6,7 @@ const cors = require('cors');
 const fileUpload = require('express-fileupload');
 const path = require('path');
 
+
 const PORT = process.env.PORT || 5001;
 
 
@@ -14,7 +15,7 @@ require('dotenv').config();
 const app = express();
 app.use(logger('dev'));
 app.use('*', cors({
-    origin: 'http://localhost:5173',
+    origin: 'https://makajerky-test.onrender.com',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true 
 }));
