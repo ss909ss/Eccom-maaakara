@@ -25,7 +25,7 @@ const Sets: React.FC = () => {
                         className={styles.productList__card}
                     >
                         <img
-                            src={`https://eccom-maaakara.onrender.com${box.image}`}
+                            src={`http://localhost:5001${box.image}`}
                             alt={box.title}
                             className={styles.productImage}
                         />

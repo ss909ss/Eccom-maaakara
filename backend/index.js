@@ -5,6 +5,7 @@ const logger = require('morgan');
 const cors = require('cors');
 const fileUpload = require('express-fileupload');
 const path = require('path');
+
 const PORT = process.env.PORT || 5001;
 
 
@@ -13,7 +14,7 @@ require('dotenv').config();
 const app = express();
 app.use(logger('dev'));
 app.use('*', cors({
-    origin: 'https://eccom-maaakara-1.onrender.com',
+    origin: 'http://localhost:5173',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true 
 }));
@@ -37,5 +38,14 @@ app.get('/', (req, res) => {
     res.send("Welcome to the API!");
 });
 
+const start = async () => {
+    try {
+        app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
+    } catch (e) {
+        console.log(e);
+    }
+};
+
+start();
 
 module.exports = app;
