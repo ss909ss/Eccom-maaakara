@@ -60,12 +60,12 @@ const allBanners = async (req, res) => {
     const banners = await prisma.banner.findMany(); 
 
     // If needed, add the full URL to the image path
-    const bannersWithFullUrls = banners.map(banner => ({
-      ...banner,
-      imageUrl: `https://makajerky-test.onrender.com/static/${banner.imageUrl}`  
-    }));
+    //const bannersWithFullUrls = banners.map(banner => ({
+     // ...banner,
+      //imageUrl: `https://makajerky-test.onrender.com/static/${banner.imageUrl}`  
+    //}));
 
-    res.status(200).json(bannersWithFullUrls);
+    res.status(200).json(banners);
   } catch (e) {
     console.error('Error fetching banners:', e);
     res.status(500).json({ message: "Failed to retrieve banners" });
