@@ -15,7 +15,7 @@ require('dotenv').config();
 const app = express();
 app.use(logger('dev'));
 app.use('*', cors({
-    origin: 'https://makajerky-test.onrender.com',
+    origin: 'https://front-makajerky.onrender.com',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true 
 }));
