@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import {  useGetOnePigJerkQuery,  useRemovePigJerksMutation } from "../../services/products";
 import { Path } from "../../Path";
 import styles from './style.module.css';
-import  backendUrl from '../../config';
+
 
 
 const OneAdminPagePigJerks:FC = () => {
@@ -32,7 +32,7 @@ const OneAdminPagePigJerks:FC = () => {
             ) : Pigjerks ? (
                 <>
                     <img 
-                        src={`${backendUrl}${Pigjerks.image}`}
+                        src={`http://localhost:5001${Pigjerks.image}`}
                         alt={Pigjerks.title} 
                         className={styles.productImage} 
                     />

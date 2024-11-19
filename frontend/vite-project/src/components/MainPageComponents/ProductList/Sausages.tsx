@@ -3,7 +3,7 @@ import styles from './style.module.css';
 import { useGetAllSausagesQuery } from '../../../services/products';
 import { Link } from 'react-router-dom';
 import { Path } from '../../../Path';
-import  backendUrl from '../../../config';
+
 
 
 const Sausages: React.FC = () => {
@@ -26,7 +26,7 @@ const Sausages: React.FC = () => {
                     className={styles.productList__card}
                 >
                     <img
-                        src={`${backendUrl}${sausage.image}`}
+                        src={`http://localhost:5001${sausage.image}`}
                         alt={sausage.title}
                         className={styles.productImage}
                     />

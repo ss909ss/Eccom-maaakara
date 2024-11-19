@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import {  useGetOneSausageQuery,  useRemoveSausagesMutation } from "../../services/products";
 import { Path } from "../../Path";
 import styles from './style.module.css';
-import  backendUrl from '../../config';
+
 
 const OneAdminSausage: FC = () => {
     const navigate = useNavigate();
@@ -31,7 +31,7 @@ const OneAdminSausage: FC = () => {
             ) : sausage ? (
                 <>
                     <img 
-                        src={`${backendUrl}${sausage.image}`}
+                        src={`http://localhost:5001${sausage.image}`}
                         alt={sausage.title} 
                         className={styles.productImage} 
                     />

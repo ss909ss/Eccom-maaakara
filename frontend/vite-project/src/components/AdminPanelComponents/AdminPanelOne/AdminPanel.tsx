@@ -10,7 +10,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Path } from '../../../Path';
 import { logout } from '../../../redux/slices/adminSlice';
 import { useGetAllMeatJerkQuery, useGetAllPackingQuery, useGetAllPigJerksQuery, useGetAllSausagesQuery, useGetBannersQuery } from '../../../services/products';
-import  backendUrl from '../../../config';
+
 
 type ButtonType = 'dashboard' | 'allProducts';
 
@@ -188,7 +188,7 @@ function AdminPanel() {
                         {MeatJerks?.map((meatJerk) => (
                             <div key={meatJerk.id} className={styles.card}>
                                 <div className={styles.flex}>
-                                    <img src={`${backendUrl}${meatJerk.image}`} alt={meatJerk.title} className={styles.bannerImage} />
+                                    <img src={`http://localhost:5001${meatJerk.image}`} alt={meatJerk.title} className={styles.bannerImage} />
                                     <div className={styles.cardInfo}>
                                         <div>{meatJerk.title}</div>
                                         <div className={styles.product}>Banner</div>
@@ -203,7 +203,7 @@ function AdminPanel() {
                         {Packing?.map((Package) => (
                             <div key={Package.id} className={styles.card}>
                                 <div className={styles.flex}>
-                                    <img src={`${backendUrl}${Package.image}`} alt={Package.title} className={styles.bannerImage} />
+                                    <img src={`http://localhost:5001${Package.image}`} alt={Package.title} className={styles.bannerImage} />
                                     <div className={styles.cardInfo}>
                                         <div>{Package.title}</div>
                                         <div className={styles.product}>Banner</div>
@@ -218,7 +218,7 @@ function AdminPanel() {
                         {Pigjerks?.map((pigjerk) => (
                             <div key={pigjerk.id} className={styles.card}>
                                 <div className={styles.flex}>
-                                    <img src={`${backendUrl}${pigjerk.image}`} alt={pigjerk.title} className={styles.bannerImage} />
+                                    <img src={`http://localhost:5001${pigjerk.image}`} alt={pigjerk.title} className={styles.bannerImage} />
                                     <div className={styles.cardInfo}>
                                         <div>{pigjerk.title}</div>
                                         <div className={styles.product}>Banner</div>
@@ -233,7 +233,7 @@ function AdminPanel() {
                         {Sausages?.map((sausage) => (
                             <div key={sausage.id} className={styles.card}>
                                 <div className={styles.flex}>
-                                    <img src={`${backendUrl}${sausage.image}`} alt={sausage.title} className={styles.bannerImage} />
+                                    <img src={`http://localhost:5001${sausage.image}`} alt={sausage.title} className={styles.bannerImage} />
                                     <div className={styles.cardInfo}>
                                         <div>{sausage.title}</div>
                                         <div className={styles.product}>Banner</div>

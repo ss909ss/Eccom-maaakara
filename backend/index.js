@@ -15,7 +15,7 @@ require('dotenv').config();
 const app = express();
 app.use(logger('dev'));
 app.use('*', cors({
-    origin: 'https://front-makajerky.onrender.com',
+    origin: 'http://localhost:5173',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true 
 }));

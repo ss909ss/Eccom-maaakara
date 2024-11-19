@@ -3,7 +3,7 @@ import styles from './style.module.css';
 import { Link } from 'react-router-dom';
 import { Path } from '../../../Path';
 import { useGetAllMeatJerkQuery } from '../../../services/products';
-import  backendUrl from '../../../config';
+
 
 
 const Meat: React.FC = () => {
@@ -28,7 +28,7 @@ const Meat: React.FC = () => {
                     className={styles.productList__card}
                 >
                     <img
-                        src={`${backendUrl}${meatJerk.image}`}
+                        src={`http://localhost:5001${meatJerk.image}`}
                         alt={meatJerk.title}
                         className={styles.productImage}
                     />
